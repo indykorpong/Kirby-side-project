@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Dern : MonoBehaviour
-{    
+public class CharacterMovement: MonoBehaviour
+{
     private float x;
     private float z;
-    
+
     private Vector3 jumpForce;
     private Vector3 force;
-    
+
     public float speed = 5f;
     public float jumpSpeed = 5f;
     public float step = 10f;
@@ -79,16 +79,28 @@ public class Dern : MonoBehaviour
 
     private void SetAnimation()
     {
-        if (force.magnitude > 0.3f)
+        Debug.Log(force.magnitude);
+
+        // TODO: Remove double click (two clicks in a short time) to slash twice
+        if (Input.GetMouseButtonDown(0))
         {
-            animator.ResetTrigger("Stop");
-            animator.SetTrigger("Start");
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(force), step);
+            animator.ResetTrigger("Walk");
+            animator.ResetTrigger("Idle");
+            animator.SetTrigger("Slash");
         }
         else
         {
-            animator.ResetTrigger("Start");
-            animator.SetTrigger("Stop");
+            if (force.magnitude > 0.3f)
+            {
+                animator.ResetTrigger("Idle");
+                animator.SetTrigger("Walk");
+                transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(force), step);
+            }
+            else
+            {
+                animator.ResetTrigger("Walk");
+                animator.SetTrigger("Idle");
+            }
         }
     }
 }

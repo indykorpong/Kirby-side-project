@@ -135,7 +135,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 41b9ac203e3f7e94b93c0fe7866e7536,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.7
+      value: 0.09
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 41b9ac203e3f7e94b93c0fe7866e7536,
         type: 3}
@@ -145,7 +145,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 41b9ac203e3f7e94b93c0fe7866e7536,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.26
+      value: -1.17
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 41b9ac203e3f7e94b93c0fe7866e7536,
         type: 3}
@@ -306,9 +306,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 589542998}
-  - component: {fileID: 589542997}
   - component: {fileID: 589542999}
   - component: {fileID: 589543000}
+  - component: {fileID: 589542997}
   m_Layer: 0
   m_Name: Ninja
   m_TagString: Untagged
@@ -325,14 +325,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 589542996}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3bcb2c5b6a92e142957d06546d3a3cd, type: 3}
+  m_Script: {fileID: 11500000, guid: 9f7b5ac6030d91a479c969580db8f923, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
   jumpSpeed: 300
-  step: 5
+  step: 10
   isGrounded: 1
-  animator: {fileID: 1265395294}
+  animator: {fileID: 739701195}
   rb: {fileID: 589542999}
 --- !u!4 &589542998
 Transform:
@@ -469,6 +469,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!95 &739701195 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: -6057140222963153312, guid: 41b9ac203e3f7e94b93c0fe7866e7536,
+    type: 3}
+  m_PrefabInstance: {fileID: 201771431}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -552,12 +558,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &1265395294 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: -6057140222963153312, guid: 41b9ac203e3f7e94b93c0fe7866e7536,
-    type: 3}
-  m_PrefabInstance: {fileID: 201771431}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1265395295 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 41b9ac203e3f7e94b93c0fe7866e7536,
